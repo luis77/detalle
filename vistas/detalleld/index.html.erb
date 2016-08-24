@@ -38,9 +38,7 @@
       <% @productos.each do |producto| %>
 
          <tr id="producto_<%= producto.id %>">
-           <% if producto.Clave == @detalleld.articulo %>
-          <td></td>
-         <%else%>
+           <% if producto.Clave <> @detalleld.articulo %>
           <td><%= producto.Clave %></td>
           <td><%= producto.Producto %></td>
           <td><%= producto.CodBarras %></td>
