@@ -1,0 +1,11 @@
+$("#myproductadder_<%= @detalle.Articulo %>").modal('hide');
+$(".detalle_tipo").val('');
+$(".detalle_factor").val('');
+
+
+$("#container_detalleld").prepend('<%= j render @detalle %>'); //Prepend before append
+$("#detalle_<%= @detalle.id %>").hide().fadeIn(1000);
+
+$("#producto_<%= @detalle.Articulo %>").fadeOut(500, function(){
+  $(this).remove();
+});

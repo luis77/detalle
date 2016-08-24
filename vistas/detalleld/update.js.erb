@@ -1,0 +1,7 @@
+$("#myupdatedetalle_<%= @detalle.id %>").modal('hide');
+
+$("#detalle_<%= @detalle.id %>").fadeOut(500, function(){
+  $(this).remove();
+  $("#container_detalleld").prepend('<%= j render @detalle %>');
+
+});
